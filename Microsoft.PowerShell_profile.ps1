@@ -51,6 +51,10 @@ function ScoopExport {
 }
 
 function ScoopImport {
+    scoop bucket add extras
+    scoop bucket add java
+    scoop bucket add nonportable
+
     $apps = gc scoop-apps.txt
     scoop install @apps
 }
