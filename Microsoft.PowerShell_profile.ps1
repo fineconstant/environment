@@ -46,6 +46,15 @@ function UpdateAzPowerShell {
     Update-Module -Name Az -Verbose
 }
 
+function ScoopExport {
+    (scoop export) | sls '^([\w-]+)' | % { $_.matches.groups[1].value } > scoop-apps.txt
+}
+
+function ScoopImport {
+    $apps = gc scoop-apps.txt
+    scoop install @apps
+}
+
 New-Alias -Name Update-All -Value UpdateAll
 try { $null = gcm pshazz -ea stop; pshazz init } catch { }
 
