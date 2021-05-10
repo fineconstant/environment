@@ -14,6 +14,8 @@ function ConfigurePsProfile {
     Set-PSReadlineKeyHandler -Key Tab -Function Complete
 
     Set-PSReadlineOption -BellStyle None
+
+    Write-Output '>>> Hint: shut down all WSL 2 VMs "wsl --shutdown"'
 }
 
 function UpdateAll {
@@ -63,3 +65,5 @@ New-Alias -Name Update-All -Value UpdateAll
 try { $null = gcm pshazz -ea stop; pshazz init } catch { }
 
 ConfigurePsProfile
+
+Set-Location D:/workspace
