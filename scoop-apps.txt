@@ -5,6 +5,7 @@ ammonite
 aria2
 azure-cli
 calibre-normal
+coursier
 dark
 dbeaver
 freecommander
@@ -12,9 +13,10 @@ gcloud
 gimp
 git
 go
-graalvm11
+graalvm-jdk11
 gradle
 graphviz
+hadoop-winutils
 hugo-extended
 inkscape
 innounp
@@ -24,7 +26,6 @@ lessmsi
 llvm
 maven
 mkcert
-msys2
 nodejs-lts
 openshift-origin-client
 plantuml
