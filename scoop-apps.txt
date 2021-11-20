@@ -12,6 +12,7 @@ gimp
 git
 go
 graalvm-jdk11
+graalvm-jdk17
 gradle
 graphviz
 hadoop-winutils
