@@ -1,13 +1,11 @@
 7zip
-adopt11-hotspot
-adopt11-openj9
 ammonite
 aria2
 azure-cli
+bat
 calibre-normal
 coursier
 dark
-dbeaver
 freecommander
 gcloud
 gimp
@@ -27,6 +25,8 @@ llvm
 maven
 mkcert
 nodejs-lts
+openjdk11
+openjdk17
 openshift-origin-client
 plantuml
 protobuf
@@ -37,4 +37,5 @@ sbt
 scala
 sql-server-management-studio-np
 stack
+vlc
 yarn
