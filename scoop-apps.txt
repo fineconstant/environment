@@ -25,6 +25,7 @@ lessmsi
 llvm
 maven
 mkcert
+musescore
 nodejs-lts
 openjdk11
 openjdk17
