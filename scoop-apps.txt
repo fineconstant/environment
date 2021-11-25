@@ -27,8 +27,6 @@ maven
 mkcert
 musescore
 nodejs-lts
-openjdk11
-openjdk17
 openshift-origin-client
 plantuml
 protobuf
@@ -39,5 +37,7 @@ sbt
 scala
 sql-server-management-studio-np
 stack
+temurin11-jdk
+temurin17-jdk
 vlc
 yarn
