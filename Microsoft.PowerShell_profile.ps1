@@ -16,7 +16,11 @@ function ConfigurePsProfile {
     Set-PSReadlineOption -BellStyle None
 
     Write-Output '>>> Hint: shut down all WSL 2 VMs "wsl --shutdown"'
-    Write-Output "`n>>> audio <youtube url> - download auto from YouTube"
+
+    Write-Output "`n### PowerShell functions:"
+    Write-Output '## UpdateAll (alias Update-All) - updates Scoopt, Rust, PowerShell'
+    Write-Output '## ScoopExport - exports currently installed Scoop apps into a file'
+    Write-Output "## Audtio -Url <youtube url> - downloads auto from YouTube`n"
 }
 
 function UpdateAll {
