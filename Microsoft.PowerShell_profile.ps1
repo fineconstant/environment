@@ -16,6 +16,7 @@ function ConfigurePsProfile {
     Set-PSReadlineOption -BellStyle None
 
     Write-Output '>>> Hint: shut down all WSL 2 VMs "wsl --shutdown"'
+    Write-Output "`n>>> audio <youtube url> - download auto from YouTube"
 }
 
 function UpdateAll {
@@ -23,7 +24,7 @@ function UpdateAll {
     scoop status
     scoop update
     scoop update *
-    
+
     Write-Output "`n>>> Removing old Scoop packages..."
     scoop cleanup *
     Write-Output "`n>>> Cleaning old Scoop's cache..."
@@ -61,8 +62,24 @@ function ScoopImport {
     scoop install @apps
 }
 
+function Audio {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [string]$Url
+    )
+
+    Write-Output "$Url"
+    youtube-dl --extract-audio --format bestaudio --audio-format m4a $Url
+}
+
 New-Alias -Name Update-All -Value UpdateAll
-try { $null = gcm pshazz -ea stop; pshazz init } catch { }
+try {
+    $null = gcm pshazz -ea stop; pshazz init
+}
+catch {
+}
 
 ConfigurePsProfile
 
