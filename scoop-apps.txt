@@ -5,10 +5,10 @@ azure-cli
 bat
 calibre-normal
 coursier
+cpu-z
 dark
+ffmpeg
 freecommander
-gcloud
-gimp
 git
 go
 graalvm-jdk11
@@ -35,9 +35,10 @@ python
 rustup
 sbt
 scala
-sql-server-management-studio-np
 stack
 temurin11-jdk
 temurin17-jdk
 vlc
+xmind8
 yarn
+youtube-dl
