@@ -35,10 +35,10 @@ python
 rustup
 sbt
 scala
+signal
 stack
 temurin11-jdk
 temurin17-jdk
 vlc
-xmind8
 yarn
 youtube-dl
