@@ -20,7 +20,7 @@ function ConfigurePsProfile {
     Write-Output "`n### PowerShell functions:"
     Write-Output '## UpdateAll (alias Update-All) - updates Scoopt, Rust, PowerShell'
     Write-Output '## ScoopExport - exports currently installed Scoop apps into a file'
-    Write-Output "## Audtio -Url <youtube url> - downloads auto from YouTube`n"
+    Write-Output "## Audio -Url <youtube url> - downloads auto from YouTube`n"
 }
 
 function UpdateAll {
@@ -35,7 +35,6 @@ function UpdateAll {
     scoop cache rm *
 
     UpdateRust
-    UpdateAzPowerShell
 }
 
 function UpdateRust {
@@ -46,11 +45,6 @@ function UpdateRust {
     rustup --version
     rustc --version
     cargo --version
-}
-
-function UpdateAzPowerShell {
-    Write-Output "`n>>> Updating Az PowerShell modules..."
-    Update-Module -Name Az -Verbose
 }
 
 function ScoopExport {
@@ -75,7 +69,7 @@ function Audio {
     )
 
     Write-Output "$Url"
-    youtube-dl --extract-audio --format bestaudio --audio-format m4a $Url
+    youtube-dl --extract-audio --format bestaudio --audio-format mp3 $Url
 }
 
 New-Alias -Name Update-All -Value UpdateAll
